@@ -1,15 +1,15 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 import { socialMedia } from "@/data";
 import MagicButton from "@/components/ui/MagicButton";
 
 const Footer = () => {
   return (
     <footer className="w-full pb-10 mb-[100px] md:mb-5" id="contact">
-      {/* background grid */}
-
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to <span className="text-purple">collaborate?</span>  Drop me a line and let's make it happen.
+          Ready to <span className="text-purple">collaborate?</span> Drop me a line and let&apos;s make it happen.
         </h1>
         <a href="mailto:rsreeprada1@gmail.com">
           <MagicButton
@@ -28,12 +28,12 @@ const Footer = () => {
           {socialMedia.map((info) => (
             <a
               key={info.id}
-              href={info.link} // This makes the icon clickable
-              target="_blank" // Opens the link in a new tab
-              rel="noopener noreferrer" // Security feature when opening links in new tabs
+              href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={info.img} alt="icons" width={20} height={20} />
+              <Image src={info.img} alt="icons" width={20} height={20} />
             </a>
           ))}
         </div>
